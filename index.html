@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random password generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="whole_div_wrapper"> 
+    <div class="container">
+        <div class="content_div">
+            <div class="title">
+                <h1>Generate a <br> random password </h1>
+            </div>
+            <div class="subtitle">
+                <h2>Never use an insecure password again.</h2>
+                <div class="div_slider_wrapper">
+                    <div class="slider_container">
+                        <input 
+                        type="range"
+                        min="8"
+                        max="18"
+                        value="1"
+                        class="slider"
+                        id="myRange"
+                        >
+                    </div>
+                    <p>Number of characters: <span id="slider_num"></span> </p>
+                    <div class="generate_btn">
+                        <button id="generate" onclick="generatePassword()">
+                            Generate passwords
+                        </button>
+                    </div>
+                    <hr>
+                    <div class="gen-pw-container">
+                        <div class="pass1">
+                            <div class="generatePasswords" >
+                                <p id="pass1">password preview</p>
+                                <button class="copy-btn" onclick="copyToClipboard (document.getElementById('pass1'))">copy</button>
+                            </div>
+                        </div>
+                        <div class="pass2">
+                            <div class="generatePasswords" >
+                                <p id="pass2">password preview</p>
+                                <button class="copy-btn" onclick="copyToClipboard (document.getElementById('pass1'))">copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
